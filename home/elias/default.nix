@@ -1,13 +1,9 @@
 { pkgs, ... }:
  
-{ }
-#   programs.neovim = {
-#     enable = true;
-#     viAlias = true;
-#     vimAlias = true;
-#     extraConfig = builtins.readFile ./nvim/init.vim;
-#     plugins = with pkgs.vimPlugins; [
-#       vim-nix
-#     ];
-#   };
-# }
+{
+  imports = [
+    ./nvim
+  ];
+
+  home.stateVersion = "20.09";
+}

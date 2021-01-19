@@ -58,8 +58,13 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    termite wget firefox ranger git spotify discord pavucontrol ncdu
-    curl clang gnupg tree gnumake
+    wget curl gnupg git ncdu gotop htop tree
+
+    clang lldb
+    gnumake gcc gdb
+    ghc cabal-install
+
+    ranger termite firefox spotify discord pavucontrol
   ];
   programs.sway.enable = true;
   programs.fish.enable = true;

@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
     ];
 
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
@@ -37,6 +38,7 @@
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  home-manager.users.elias = (import ./home/elias);
   users.users.elias = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" ];
@@ -66,6 +68,8 @@
     ncdu
     curl
     clang
+    gnupg
+    tree
   ];
   programs.sway.enable = true;
   programs.fish.enable = true;

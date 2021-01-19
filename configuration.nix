@@ -38,7 +38,10 @@
   hardware.pulseaudio.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  home-manager.users.elias = (import ./home/elias);
+  home-manager = {
+    useGlobalPkgs = true;
+    users.elias = (import ./home/elias);
+  };
   users.users.elias = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" ];
@@ -55,21 +58,8 @@
   '';
 
   environment.systemPackages = with pkgs; [
-    termite
-    neovim
-    wget
-    firefox
-    ranger
-    vscode
-    git
-    spotify
-    discord
-    pavucontrol
-    ncdu
-    curl
-    clang
-    gnupg
-    tree
+    termite wget firefox ranger git spotify discord pavucontrol ncdu
+    curl clang gnupg tree gnumake
   ];
   programs.sway.enable = true;
   programs.fish.enable = true;

@@ -65,6 +65,7 @@
     ghc cabal-install
 
     ranger termite firefox spotify discord pavucontrol
+    i3status
   ];
   programs.sway.enable = true;
   programs.fish.enable = true;

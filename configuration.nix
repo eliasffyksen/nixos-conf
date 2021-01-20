@@ -6,6 +6,7 @@
     [
       ./hardware-configuration.nix
       ./packages.nix
+      ./users.nix
     ];
 
   # Boot options
@@ -47,19 +48,6 @@
   # Sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
-
-  # User configuration
-  home-manager = {
-    useGlobalPkgs = true;
-    users.elias = (import ./home/elias);
-  };
-  users.users.elias = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "docker" ];
-    createHome = true;
-    home = "/home/elias";
-    shell = pkgs.fish;
-  };
 
   # System state version
   # (!!!NB: READ NixOS MANUAL BEFORE MESSING WITH THIS!!!)

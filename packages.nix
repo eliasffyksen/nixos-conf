@@ -26,6 +26,6 @@
   # Custom program configurations
   programs.sway.enable = true;
   programs.fish.enable = true;
-  virtulization.docker.enable = true;
+  virtualisation.docker.enable = true;
 }
 

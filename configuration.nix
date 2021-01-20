@@ -55,7 +55,7 @@
   };
   users.users.elias = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" ];
+    extraGroups = [ "wheel" "audio" "docker" ];
     createHome = true;
     home = "/home/elias";
     shell = pkgs.fish;

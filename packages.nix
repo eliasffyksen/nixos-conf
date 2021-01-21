@@ -16,7 +16,7 @@
     # User applications
     mako libnotify # Notification center
     ranger termite firefox spotify discord pavucontrol
-    i3status gimp
+    i3status gimp chromium xclip
   ];
 
   # Fonts

@@ -7,7 +7,7 @@
     vimAlias = true;
     extraConfig = builtins.readFile ./init.vim;
     plugins = with pkgs.vimPlugins; [
-      vim-nix
+      vim-nix nerdtree ultisnips
     ];
   };
 }

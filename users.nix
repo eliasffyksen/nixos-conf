@@ -12,6 +12,11 @@
     };
   };
 
+  # Tmp downloads folder
+  fileSystems."/home/elias/Downloads" = {
+    fsType = "tmpfs";
+  };
+
   # Home Manager
   home-manager = {
     useGlobalPkgs = true;

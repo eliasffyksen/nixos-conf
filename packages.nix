@@ -8,7 +8,7 @@
 
     # Development packages
     clang lldb # Clang LLVM
-    gnumake gcc gdb # GCC Build Tools
+    gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
     nodejs # NodeJS
     docker-compose # Docker

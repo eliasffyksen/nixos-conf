@@ -15,6 +15,7 @@
 
     # User applications
     mako libnotify # Notification center
+    grim slurp # Sway screenshot
     ranger termite firefox spotify discord pavucontrol
     i3status gimp chromium xclip
   ];

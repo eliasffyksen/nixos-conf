@@ -4,20 +4,27 @@
   # Common packages
   environment.systemPackages = with pkgs; [
     # System utils
-    wget curl gnupg git ncdu gotop htop tree killall gptfdisk
+    wget curl gnupg git ncdu gotop htop tree killall
+    gptfdisk zip unzip
 
     # Development packages
     clang lldb # Clang LLVM
+    cmake extra-cmake-modules # CMake
+    egl-wayland # Wayland code for dev
+    pkg-config # PkgConfig for GLFW build
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
     nodejs # NodeJS
     docker-compose # Docker
+    python3 # Python
+    blender unity3d # Game Dev
+    rstudio # R
 
     # User applications
     mako libnotify # Notification center
     grim slurp # Sway screenshot
     ranger termite firefox spotify discord pavucontrol
-    i3status gimp chromium xclip
+    i3status gimp chromium xclip teams libreoffice
   ];
 
   # Fonts

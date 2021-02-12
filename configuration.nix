@@ -7,6 +7,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./users.nix
+      ./services.nix
     ];
 
   # Boot options

@@ -5,10 +5,10 @@
   environment.systemPackages = with pkgs; [
     # System utils
     wget curl gnupg git ncdu gotop htop tree killall
-    gptfdisk zip unzip
+    gptfdisk zip unzip openconnect
 
     # Development packages
-    clang lldb # Clang LLVM
+    clang lldb llvm # Clang LLVM
     cmake extra-cmake-modules # CMake
     egl-wayland # Wayland code for dev
     pkg-config # PkgConfig for GLFW build

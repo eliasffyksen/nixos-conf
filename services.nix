@@ -1,15 +1,12 @@
 { pkgs, ... }:
+let
+  secrets = import ./secrets.nix;
+in
 {
   systemd.services.uomvpn = {
     description = "UoM VPN Service";
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
-
-    serviceConfig = {
-      ExecStart = "/bin/sh /home/elias/bin/uomvpn.sh ${pkgs.openconnect}/bin/openconnect";
-      Type = "simple";
-      Restart = "always";
-      RestartSec = 15;
-    };
+    script = "echo '${secrets.uomPwd}' | ${pkgs.openconnect}/bin/openconnect --protocol=gp vpnconnect-standard.manchester.ac.uk --user '${secrets.uomUser}' --passwd-on-stdin";
   };
 }

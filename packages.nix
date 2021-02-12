@@ -4,7 +4,7 @@
   # Common packages
   environment.systemPackages = with pkgs; [
     # System utils
-    wget curl gnupg git ncdu gotop htop tree killall
+    wget curl gnupg git git-crypt ncdu gotop htop tree killall
     gptfdisk zip unzip openconnect
 
     # Development packages

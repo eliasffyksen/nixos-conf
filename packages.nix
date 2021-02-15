@@ -19,12 +19,13 @@
     python3 # Python
     blender unity3d # Game Dev
     rstudio # R
+    jdk11 # Java
 
     # User applications
     mako libnotify # Notification center
     grim slurp # Sway screenshot
     ranger termite firefox spotify discord pavucontrol
-    i3status gimp chromium xclip teams libreoffice
+    i3status gimp chromium xclip teams libreoffice jetbrains.idea-community
   ];
 
   # Fonts

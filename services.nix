@@ -7,6 +7,7 @@ in
     description = "UoM VPN Service";
     after = [ "network.target" ];
     wantedBy = [ "multi-user.target" ];
-    script = "echo '${secrets.uomPwd}' | ${pkgs.openconnect}/bin/openconnect --protocol=gp vpnconnect-standard.manchester.ac.uk --user '${secrets.uomUser}' --passwd-on-stdin";
+    path = [ pkgs.openconnect pkgs.nettools pkgs.gawk ];
+    script = "echo '${secrets.uomPwd}' | openconnect --protocol=gp vpnconnect-standard.manchester.ac.uk --user '${secrets.uomUser}' --passwd-on-stdin";
   };
 }

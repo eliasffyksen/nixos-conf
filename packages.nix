@@ -9,9 +9,6 @@
 
     # Development packages
     clang lldb llvm # Clang LLVM
-    cmake extra-cmake-modules # CMake
-    egl-wayland # Wayland code for dev
-    pkg-config # PkgConfig for GLFW build
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
     nodejs # NodeJS

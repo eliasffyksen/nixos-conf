@@ -20,7 +20,7 @@ in
     gptfdisk zip unzip openconnect
 
     # Development packages
-    llvmPackages_11.clang-unwrapped lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM
+    clang_11 lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
     nodejs # NodeJS

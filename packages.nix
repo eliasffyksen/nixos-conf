@@ -17,7 +17,7 @@ in
   environment.systemPackages = with pkgs; [
     # System utils
     wget curl gnupg git git-crypt ncdu gotop htop tree killall
-    gptfdisk zip unzip openconnect
+    gptfdisk zip unzip openconnect traceroute
 
     # Development packages
     clang_11 lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM
@@ -25,11 +25,10 @@ in
     ghc cabal-install # Haksell
     nodejs # NodeJS
     docker-compose # Docker
-    python3 # Python
+    python3Full # Python
     blender unity3d # Game Dev
     rstudio jupyter # R
     rustc
-    python3WithPackages
 
     # User applications
     mako libnotify # Notification center

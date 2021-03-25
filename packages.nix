@@ -10,6 +10,8 @@ let
     pandas
     pylint
     scipy
+    scikitlearn
+    pygame
   ]);
 in
 {
@@ -17,15 +19,16 @@ in
   environment.systemPackages = with pkgs; [
     # System utils
     wget curl gnupg git git-crypt ncdu gotop htop tree killall
-    gptfdisk zip unzip openconnect traceroute
+    gptfdisk zip unzip openconnect traceroute inetutils sshpass
 
     # Development packages
     clang_11 lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
-    nodejs # NodeJS
+    nodejs deno # JavaScript TypeScript
     docker-compose # Docker
-    python3Full # Python
+    #python3Full python38Packages.pycodestyle # Python
+    python3WithPackages
     blender unity3d # Game Dev
     rstudio jupyter # R
     rustc
@@ -51,5 +54,6 @@ in
   programs.sway.enable = true;
   programs.fish.enable = true;
   virtualisation.docker.enable = true;
+  services.blueman.enable = true;
 }
 

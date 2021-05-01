@@ -5,7 +5,7 @@
   users.users = {
     elias = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "audio" "docker" ];
+      extraGroups = [ "wheel" "audio" "docker" "wireshark" ];
       createHome = true;
       home = "/home/elias";
       shell = pkgs.fish;

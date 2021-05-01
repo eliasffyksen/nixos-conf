@@ -1,7 +1,6 @@
 { pkgs, ... }:
 let
   python3WithPackages = pkgs.python3.withPackages(p: with p; [
-    (opencv4.override(old: { enableGtk2 = true; }))
     compiledb
     jedi
     jupyterlab
@@ -12,6 +11,7 @@ let
     scipy
     scikitlearn
     pygame
+    pycodestyle
   ]);
 in
 {
@@ -25,12 +25,13 @@ in
     clang_11 lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
-    nodejs deno # JavaScript TypeScript
+    nodejs # JavaScript TypeScript
+    nodePackages.typescript
     docker-compose # Docker
-    #python3Full python38Packages.pycodestyle # Python
     python3WithPackages
-    blender unity3d # Game Dev
+    blender # Game Dev
     rstudio jupyter # R
+    mongodb
     rustc
 
     # User applications
@@ -38,6 +39,10 @@ in
     grim slurp # Sway screenshot
     ranger termite firefox spotify discord pavucontrol steam
     i3status gimp chromium xclip teams libreoffice jetbrains.idea-community
+    wireshark
+
+    # Local pkgs
+    (callPackage (import ./pkgs/hello) {})
   ];
 
   # JAVA
@@ -54,6 +59,8 @@ in
   programs.sway.enable = true;
   programs.fish.enable = true;
   virtualisation.docker.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  users.extraGroups.vboxusers.members = [ "elias" ];
   services.blueman.enable = true;
 }
 

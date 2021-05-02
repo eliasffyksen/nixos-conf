@@ -1,6 +1,9 @@
 
 { config, pkgs, ... }:
 
+let
+  secrets = import ./secrets.nix;
+in
 {
   imports =
     [
@@ -26,19 +29,11 @@
   '';
 
   # Networking
-  networking.useDHCP = false;
-  # networking.interfaces.enp0s31f6.useDHCP = true;
-  # networking.interfaces.ens12u1u4.useDHCP = true;
-  networking.interfaces.wlp0s20f3.useDHCP = true;
-  networking.networkmanager.enable = true;
+  networking.useDHCP = true;
 
   # Wifi
-  # networking.wireless.enable = true;
-  # networking.wireless.networks = {
-  #   Glide0198626-5G = {
-  #     psk = "";
-  #   };
-  # };
+  networking.wireless.enable = true;
+  networking.wireless.networks = secrets.networks;
 
   # Firewall configuration
   networking.firewall.enable = true;

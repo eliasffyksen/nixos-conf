@@ -54,13 +54,14 @@ in
   # Fonts
   fonts.fonts = with pkgs;
   [ font-awesome source-code-pro ];
-  
-  # Custom program configurations
+
+  # Sway
   programs.sway.enable = true;
+
+  # Custom program configurations
   programs.fish.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
-  users.extraGroups.vboxusers.members = [ "elias" ];
   services.blueman.enable = true;
 }
 

@@ -39,7 +39,7 @@ in
     grim slurp # Sway screenshot
     ranger termite firefox spotify discord pavucontrol steam
     i3status gimp chromium xclip teams libreoffice jetbrains.idea-community
-    wireshark
+    wireshark zathura
 
     # Local pkgs
     (callPackage (import ./pkgs/hello) {})

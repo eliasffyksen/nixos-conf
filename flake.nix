@@ -1,9 +1,9 @@
 {
   inputs = {
-    stable.url = "github:NixOS/nixpkgs/nixos-20.09";
+    stable.url = "github:NixOS/nixpkgs/nixos-21.05";
     unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:rycee/home-manager/release-20.09";
+      url = "github:rycee/home-manager/release-21.05";
       inputs.nixpkgs.follows = "stable";
     };
   };

@@ -7,6 +7,7 @@
     ./fish
     ./termite
     ./sway
+    ./i3
     ./git
     ./ssh
   ];

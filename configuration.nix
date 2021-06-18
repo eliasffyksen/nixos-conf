@@ -34,6 +34,7 @@ in
   # Wifi
   networking.wireless.enable = true;
   networking.wireless.networks = secrets.networks;
+  networking.wireless.interfaces = [ "wlp0s20f3" ];
 
   # Firewall configuration
   networking.firewall.enable = true;

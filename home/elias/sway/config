@@ -1,5 +1,4 @@
 # Default config for sway
-#
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
@@ -223,11 +222,28 @@ font pango:SourceCodePro Medium 12
 default_border pixel 1
 output "*" bg "~/.config/sway/background.*" fill
 
-bindsym $mod+o exec --no-startup-id swaylock -i ~/.config/background.*
+bindsym $mod+o exec --no-startup-id swaylock -i "~/.config/sway/background.*"
 
 # Change workspaces
 exec --no-startup-id swaymsg workspace 9
 exec --no-startup-id swaymsg workspace 2
 
 include @sysconfdir@/sway/config.d/*
+
+# Volume controls
+
+bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume    exec --no-startup-id amixer set Master 5%-
+bindsym XF86AudioMute           exec --no-startup-id amixer set Master toggle
+
+# Media player controls
+
+bindsym XF86AudioPlay   exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause  exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext   exec --no-startup-id playerctl next
+bindsym XF86AudioPrev   exec --no-startup-id playerctl previous
+
+# Restart
+
+bindsym $mod+Shift+r restart
 

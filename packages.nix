@@ -34,7 +34,7 @@ in
     # System utils
     wget curl gnupg git git-crypt ncdu gotop htop tree killall
     gptfdisk zip unzip openconnect traceroute inetutils sshpass
-    pmutils sysbench
+    pmutils sysbench lm_sensors
 
     # Development packages
     clang_11 lld_11 lldb_11 llvm_11 llvmPackages.bintools # Clang LLVM

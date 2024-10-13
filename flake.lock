@@ -7,8 +7,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1708304835,
-        "narHash": "sha256-P3bxfWs7Qf8KHU8V+2sFT2SgiSUwbhF9jybRj/MoZb4=",
+        "lastModified": 1728833197,
+        "narHash": "sha256-kP40Beyo0hrUWa4OWRv/QG3e3f4u8YrG9Ab4yBIP+SM=",
         "path": "/home/elias/projects/dwm-eff",
         "type": "path"
       },
@@ -64,11 +64,11 @@
     },
     "unstable": {
       "locked": {
-        "lastModified": 1724479785,
-        "narHash": "sha256-pP3Azj5d6M5nmG68Fu4JqZmdGt4S4vqI5f8te+E/FTw=",
+        "lastModified": 1728492678,
+        "narHash": "sha256-9UTxR8eukdg+XZeHgxW5hQA9fIKHsKCdOIUycTryeVw=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "d0e1602ddde669d5beb01aec49d71a51937ed7be",
+        "rev": "5633bcff0c6162b9e4b5f1264264611e950c8ec7",
         "type": "github"
       },
       "original": {

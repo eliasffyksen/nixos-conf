@@ -25,18 +25,13 @@
     rustup
     go go-migrate
 
-    (python310.withPackages (p: with p; [
-      pytorch
-      torchvision
-      numpy
-      matplotlib
-      tqdm
-      pygame
-    ]))
+    (python312.withPackages (p: with p; []))
+	swig pyright
 
     # User applications
     mako libnotify # Notification center
     grim slurp # Sway screenshot
+	arandr # Screen layout
     ranger firefox spotify playerctl pavucontrol steam
     i3status gimp chromium xclip libreoffice jetbrains.idea-community
     wireshark zathura zoom-us brightnessctl ffmpeg discord transmission-qt
@@ -47,6 +42,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  programs.neovim.enable = true;
 
   # Fonts
   fonts.packages = with pkgs;

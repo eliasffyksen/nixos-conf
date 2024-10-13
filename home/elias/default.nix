@@ -2,7 +2,6 @@
  
 {
   imports = [
-    ./nvim
     ./vscode
     ./fish
     ./sway

@@ -52,6 +52,7 @@ in
   # Desktop environment
   services.xserver = {
     enable = true;
+    layout = "us";
 
     displayManager = {
       defaultSession = "dwm-eff";

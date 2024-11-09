@@ -12,6 +12,8 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
 
+  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c47ec7a7-773c-4f08-a198-e627871eb361";
       fsType = "ext4";
@@ -30,6 +32,4 @@
   swapDevices =
     [ { device = "/dev/disk/by-uuid/83edeb22-ae8c-4e81-ae89-d166e9cfef0c"; }
     ];
-
-  powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
 }

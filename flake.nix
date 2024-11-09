@@ -35,5 +35,12 @@
         specialArgs = { inherit inputs; };
       };
     };
+
+	iso = inputs.stable.lib.nixosSystem {
+	  inherit system;
+	  modules = [
+        ./iso.nix
+	  ];
+	};
   };
 }

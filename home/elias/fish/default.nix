@@ -9,7 +9,7 @@
             set -x EDITOR nvim
             set -x VISUAL nvim
             set -x _JAVA_AWT_WM_NONREPARENTING 1
-            set -x PATH $HOME/.local/bin $PATH
+            set -pax PATH $HOME/.local/bin (go env GOPATH)/bin
 
             eval (ssh-agent -c)
 

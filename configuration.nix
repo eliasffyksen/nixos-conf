@@ -16,6 +16,10 @@ in
   # Boot options
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.extraModulePackages = with config.boot.kernelPackages; [
+	rtl8821au
+  ];
+  hardware.bluetooth.enable = true;
 
   # Machine options
   networking.hostName = "nixpad";

@@ -7,7 +7,7 @@
     wget curl gnupg git git-crypt ncdu gotop htop tree killall
     gptfdisk zip unzip openconnect traceroute inetutils sshpass
     pmutils sysbench lm_sensors file neovim bc p7zip moreutils
-    rclone tmux pstree networkmanager at
+    rclone tmux pstree networkmanager at usbutils
 
     # Development packages
     clang_11 lld_11 lldb_11
@@ -36,6 +36,7 @@
     i3status gimp chromium xclip libreoffice jetbrains.idea-community
     wireshark zathura zoom-us brightnessctl ffmpeg discord transmission-qt
     freecad filezilla wally-cli prismlauncher graphviz feh dmenu vlc libsForQt5.kalarm
+	ripgrep fzf
   ];
 
   programs.gnupg.agent = {

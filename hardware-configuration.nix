@@ -11,8 +11,6 @@
   boot.initrd.availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "usbhid" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
-  hardware.bluetooth.enable = true;
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/c47ec7a7-773c-4f08-a198-e627871eb361";

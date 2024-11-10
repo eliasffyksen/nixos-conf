@@ -7,13 +7,14 @@
       inputs.nixpkgs.follows = "stable";
     };
     dwm-eff = {
-      url = "path:/home/elias/projects/dwm-eff";
+      url = "github:eliasffyksen/dwm-eff";
       inputs.nixpkgs.follows = "stable";
     };
   };
 
   outputs = inputs: let
     system = "x86_64-linux";
+
     overlays = [
       (final: prev: {
         unstable = import inputs.unstable {
@@ -22,25 +23,28 @@
         };
       })
     ];
-  in {
-    nixosConfigurations = {
-      nixpad = inputs.stable.lib.nixosSystem {
-        inherit system;
-        modules = [
-          { nixpkgs = { inherit overlays; }; }
-          inputs.home-manager.nixosModules.home-manager
-          inputs.dwm-eff.nixosModules.dwm-eff
-          ./configuration.nix
-        ];
-        specialArgs = { inherit inputs; };
-      };
+
+    buildConfig = hostDir : inputs.stable.lib.nixosSystem {
+      inherit system;
+
+      modules = [
+       { nixpkgs = { inherit overlays; }; }
+       inputs.home-manager.nixosModules.home-manager
+       inputs.dwm-eff.nixosModules.dwm-eff
+       hostDir
+      ];
+      specialArgs = { inherit inputs; };
     };
 
-	iso = inputs.stable.lib.nixosSystem {
-	  inherit system;
-	  modules = [
-        ./iso.nix
-	  ];
-	};
+  in {
+    nixosConfigurations = {
+      nixtop = buildConfig ./nixtop;
+      nixpad = buildConfig ./nixpad;
+    };
+    
+    iso = inputs.stable.lib.nixosSystem {
+      inherit system;
+      modules = [ ./iso.nix ];
+    };
   };
 }

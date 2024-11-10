@@ -4,13 +4,11 @@ let
   secrets = import ./secrets.nix;
 in
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./users.nix
-      ./services.nix
-    ];
+  imports = [
+    ./packages.nix
+    ./users.nix
+    ./services.nix
+  ];
 
   # Boot options
   boot.loader.systemd-boot.enable = true;
@@ -21,8 +19,6 @@ in
 
   hardware.bluetooth.enable = true;
 
-  # Machine options
-  networking.hostName = "nixpad";
   time.timeZone = "Europe/London";
 
   # Package dependency managment

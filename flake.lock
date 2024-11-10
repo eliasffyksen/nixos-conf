@@ -7,14 +7,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1728833663,
-        "narHash": "sha256-jgLcjZfLj9+g0I0GCeszUcGvXFbAGfwd3yWgmEqdmyo=",
-        "path": "/home/elias/projects/dwm-eff",
-        "type": "path"
+        "lastModified": 1731154895,
+        "narHash": "sha256-KnyuGSpGeUEYPdVjrWPJD+SQA2ebCvki/zc3BQ+bf1Q=",
+        "owner": "eliasffyksen",
+        "repo": "dwm-eff",
+        "rev": "6dd59ce7d427d2e56cc331e3d8026fe8bccbeda2",
+        "type": "github"
       },
       "original": {
-        "path": "/home/elias/projects/dwm-eff",
-        "type": "path"
+        "owner": "eliasffyksen",
+        "repo": "dwm-eff",
+        "type": "github"
       }
     },
     "home-manager": {

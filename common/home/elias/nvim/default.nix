@@ -1,13 +1,9 @@
-{ pkgs, ... }:
-
+{ pkgs, nvim-conf, ... }:
 {
-  programs.neovim = {
-    enable = true;
-    viAlias = true;
-    vimAlias = true;
-    extraConfig = builtins.readFile ./init.vim;
-    plugins = with pkgs.vimPlugins; [
-      vim-nix nerdtree ultisnips
-    ];
+  home.file = {
+    ".config/nvim" = {
+      source = nvim-conf;
+      recursive = true;
+    };
   };
 }

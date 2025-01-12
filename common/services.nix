@@ -25,5 +25,23 @@ in
     };
 
     atd.enable = true;
+
+
+    # SSHD
+    sshd.enable = true;
+
+    # Desktop environment
+    displayManager.defaultSession = "dwm-eff";
+    xserver = {
+      enable = true;
+      xkb.layout = "us";
+
+      displayManager.lightdm.enable = true;
+
+      desktopManager.dwm-eff = {
+        enable = true;
+        extraStartupCommands = "~/.screenlayout/default.sh";
+      };
+    };
   };
 }

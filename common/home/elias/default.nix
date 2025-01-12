@@ -4,11 +4,10 @@
   imports = [
     ./vscode
     ./fish
-    ./sway
-    ./i3
     ./git
     ./ssh
     ./alacritty
+    ./nvim
   ];
 
   xdg.mimeApps = {

@@ -10,7 +10,7 @@ in
     gptfdisk zip unzip openconnect traceroute inetutils sshpass
     pmutils sysbench lm_sensors file neovim bc p7zip moreutils
     rclone tmux pstree networkmanager at usbutils ripgrep fzf
-	rsync pciutils neovim
+	rsync pciutils neovim btrfs-progs
   ];
 
 

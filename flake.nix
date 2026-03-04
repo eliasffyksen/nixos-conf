@@ -1,10 +1,11 @@
 {
   inputs = {
-    stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     home-manager = {
-      url = "github:rycee/home-manager/release-24.11";
+      url = "github:rycee/home-manager/release-25.05";
       inputs.nixpkgs.follows = "stable";
     };
+    claude-code.url = "github:sadjow/claude-code-nix";
     dwm-eff = {
       url = "github:eliasffyksen/dwm-eff/eff/unstable";
       inputs.nixpkgs.follows = "stable";
@@ -18,7 +19,7 @@
   outputs = inputs: let
     system = "x86_64-linux";
 
-    overlays = [ ];
+    overlays = [ inputs.claude-code.overlays.default ];
 
     buildConfig = hostDir : inputs.stable.lib.nixosSystem {
       inherit system;
@@ -37,7 +38,7 @@
 
 		  config = {
 		  	allowUnfree = true;
-			cudaSupport = true;
+			cudaSupport = false;
 		  };
 		}; }
        	hostDir

@@ -4,26 +4,33 @@
     # Development packages
     gnumake gcc gdb bison flex # GCC Build Tools
     ghc cabal-install # Haksell
-    nodejs-18_x yarn # JavaScript
+    nodejs_24 yarn # JavaScript
     docker-compose # Docker
-    blender # Game Dev
     rustup
     go go-migrate
+	claude-code
+	dbeaver-bin
 
-	cudaPackages_11.cudatoolkit
-    (python312.withPackages (p: with p; [
-	  pytorch
+	/*
+	cudaPackages_12.cudatoolkit
+    (python313.withPackages (p: with p; [
+	  torch
+	  transformers
+	  numpy
+	  scipy
+	  matplotlib
+	  psycopg
 	]))
-	#swig pyright
+	*/
 
     # User applications
     mako libnotify # Notification center
     grim slurp # Sway screenshot
 	arandr # Screen layout
     ranger firefox spotify playerctl pavucontrol steam
-    i3status gimp chromium xclip libreoffice jetbrains.idea-community
+    i3status chromium xclip libreoffice jetbrains.idea-community
     wireshark zathura zoom-us brightnessctl ffmpeg discord transmission-qt
-    freecad filezilla wally-cli prismlauncher graphviz feh dmenu vlc libsForQt5.kalarm
+    filezilla wally-cli prismlauncher graphviz feh dmenu vlc libsForQt5.kalarm
 	gparted
   ];
 

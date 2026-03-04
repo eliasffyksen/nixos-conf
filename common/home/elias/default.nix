@@ -1,5 +1,4 @@
 { pkgs, ... }:
- 
 {
   imports = [
     ./vscode
@@ -8,6 +7,7 @@
     ./ssh
     ./alacritty
     ./nvim
+	./direnv
   ];
 
   xdg.mimeApps = {

@@ -7,5 +7,7 @@
     ./hardware.nix
     ../common/config.nix
   ];
+
+  services.xserver.xkb.layout = "us";
 }
 

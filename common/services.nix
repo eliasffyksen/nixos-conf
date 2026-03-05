@@ -34,8 +34,6 @@ in
     displayManager.defaultSession = "dwm-eff";
     xserver = {
       enable = true;
-      xkb.layout = "us";
-
       displayManager.lightdm.enable = true;
 
       desktopManager.dwm-eff = {
